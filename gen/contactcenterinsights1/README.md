@@ -5,16 +5,16 @@ DO NOT EDIT !
 -->
 The `google-contactcenterinsights1` library allows access to all features of the *Google Contactcenterinsights* service.
 
-This documentation was generated from *Contactcenterinsights* crate version *6.0.0+20240624*, where *20240624* is the exact revision of the *contactcenterinsights:v1* schema built by the [mako](http://www.makotemplates.org/) code generator *v6.0.0*.
+This documentation was generated from *Contactcenterinsights* crate version *7.0.0+20240624*, where *20240624* is the exact revision of the *contactcenterinsights:v1* schema built by the [mako](http://www.makotemplates.org/) code generator *v7.0.0*.
 
 Everything else about the *Contactcenterinsights* *v1* API can be found at the
 [official documentation site](https://cloud.google.com/contact-center/insights/docs).
 # Features
 
-Handle the following *Resources* with ease from the central [hub](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/Contactcenterinsights) ...
+Handle the following *Resources* with ease from the central [hub](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/Contactcenterinsights) ...
 
 * projects
- * [*locations conversations analyses create*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationAnalysisCreateCall), [*locations conversations analyses delete*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationAnalysisDeleteCall), [*locations conversations analyses get*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationAnalysisGetCall), [*locations conversations analyses list*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationAnalysisListCall), [*locations conversations bulk analyze*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationBulkAnalyzeCall), [*locations conversations bulk delete*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationBulkDeleteCall), [*locations conversations calculate stats*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationCalculateStatCall), [*locations conversations create*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationCreateCall), [*locations conversations delete*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationDeleteCall), [*locations conversations get*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationGetCall), [*locations conversations ingest*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationIngestCall), [*locations conversations list*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationListCall), [*locations conversations patch*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationPatchCall), [*locations conversations upload*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationUploadCall), [*locations get settings*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationGetSettingCall), [*locations insightsdata export*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationInsightsdataExportCall), [*locations issue models calculate issue model stats*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelCalculateIssueModelStatCall), [*locations issue models create*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelCreateCall), [*locations issue models delete*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelDeleteCall), [*locations issue models deploy*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelDeployCall), [*locations issue models export*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelExportCall), [*locations issue models get*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelGetCall), [*locations issue models import*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelImportCall), [*locations issue models issues delete*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelIssueDeleteCall), [*locations issue models issues get*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelIssueGetCall), [*locations issue models issues list*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelIssueListCall), [*locations issue models issues patch*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelIssuePatchCall), [*locations issue models list*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelListCall), [*locations issue models patch*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelPatchCall), [*locations issue models undeploy*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelUndeployCall), [*locations operations cancel*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationOperationCancelCall), [*locations operations get*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationOperationGetCall), [*locations operations list*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationOperationListCall), [*locations phrase matchers create*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationPhraseMatcherCreateCall), [*locations phrase matchers delete*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationPhraseMatcherDeleteCall), [*locations phrase matchers get*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationPhraseMatcherGetCall), [*locations phrase matchers list*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationPhraseMatcherListCall), [*locations phrase matchers patch*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationPhraseMatcherPatchCall), [*locations update settings*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationUpdateSettingCall), [*locations views create*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationViewCreateCall), [*locations views delete*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationViewDeleteCall), [*locations views get*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationViewGetCall), [*locations views list*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationViewListCall) and [*locations views patch*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationViewPatchCall)
+ * [*locations conversations analyses create*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationAnalysisCreateCall), [*locations conversations analyses delete*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationAnalysisDeleteCall), [*locations conversations analyses get*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationAnalysisGetCall), [*locations conversations analyses list*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationAnalysisListCall), [*locations conversations bulk analyze*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationBulkAnalyzeCall), [*locations conversations bulk delete*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationBulkDeleteCall), [*locations conversations calculate stats*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationCalculateStatCall), [*locations conversations create*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationCreateCall), [*locations conversations delete*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationDeleteCall), [*locations conversations get*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationGetCall), [*locations conversations ingest*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationIngestCall), [*locations conversations list*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationListCall), [*locations conversations patch*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationPatchCall), [*locations conversations upload*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationConversationUploadCall), [*locations get settings*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationGetSettingCall), [*locations insightsdata export*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationInsightsdataExportCall), [*locations issue models calculate issue model stats*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelCalculateIssueModelStatCall), [*locations issue models create*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelCreateCall), [*locations issue models delete*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelDeleteCall), [*locations issue models deploy*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelDeployCall), [*locations issue models export*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelExportCall), [*locations issue models get*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelGetCall), [*locations issue models import*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelImportCall), [*locations issue models issues delete*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelIssueDeleteCall), [*locations issue models issues get*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelIssueGetCall), [*locations issue models issues list*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelIssueListCall), [*locations issue models issues patch*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelIssuePatchCall), [*locations issue models list*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelListCall), [*locations issue models patch*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelPatchCall), [*locations issue models undeploy*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationIssueModelUndeployCall), [*locations operations cancel*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationOperationCancelCall), [*locations operations get*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationOperationGetCall), [*locations operations list*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationOperationListCall), [*locations phrase matchers create*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationPhraseMatcherCreateCall), [*locations phrase matchers delete*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationPhraseMatcherDeleteCall), [*locations phrase matchers get*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationPhraseMatcherGetCall), [*locations phrase matchers list*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationPhraseMatcherListCall), [*locations phrase matchers patch*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationPhraseMatcherPatchCall), [*locations update settings*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationUpdateSettingCall), [*locations views create*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationViewCreateCall), [*locations views delete*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationViewDeleteCall), [*locations views get*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationViewGetCall), [*locations views list*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationViewListCall) and [*locations views patch*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/api::ProjectLocationViewPatchCall)
 
 
 
@@ -23,17 +23,17 @@ Handle the following *Resources* with ease from the central [hub](https://docs.r
 
 The API is structured into the following primary items:
 
-* **[Hub](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/Contactcenterinsights)**
+* **[Hub](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/Contactcenterinsights)**
     * a central object to maintain state and allow accessing all *Activities*
-    * creates [*Method Builders*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/common::MethodsBuilder) which in turn
-      allow access to individual [*Call Builders*](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/common::CallBuilder)
-* **[Resources](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/common::Resource)**
+    * creates [*Method Builders*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/common::MethodsBuilder) which in turn
+      allow access to individual [*Call Builders*](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/common::CallBuilder)
+* **[Resources](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/common::Resource)**
     * primary types that you can apply *Activities* to
     * a collection of properties and *Parts*
-    * **[Parts](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/common::Part)**
+    * **[Parts](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/common::Part)**
         * a collection of properties
         * never directly used in *Activities*
-* **[Activities](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/common::CallBuilder)**
+* **[Activities](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/common::CallBuilder)**
     * operations to apply to *Resources*
 
 All *structures* are marked with applicable traits to further categorize them and ease browsing.
@@ -98,9 +98,20 @@ let secret: yup_oauth2::ApplicationSecret = Default::default();
 // Provide your own `AuthenticatorDelegate` to adjust the way it operates and get feedback about
 // what's going on. You probably want to bring in your own `TokenStorage` to persist tokens and
 // retrieve them from storage.
-let auth = yup_oauth2::InstalledFlowAuthenticator::builder(
+let connector = hyper_rustls::HttpsConnectorBuilder::new()
+    .with_native_roots()
+    .unwrap()
+    .https_only()
+    .enable_http2()
+    .build();
+
+let executor = hyper_util::rt::TokioExecutor::new();
+let auth = yup_oauth2::InstalledFlowAuthenticator::with_client(
     secret,
     yup_oauth2::InstalledFlowReturnMethod::HTTPRedirect,
+    yup_oauth2::client::CustomHyperClientBuilder::from(
+        hyper_util::client::legacy::Client::builder(executor).build(connector),
+    ),
 ).build().await.unwrap();
 
 let client = hyper_util::client::legacy::Client::builder(
@@ -111,7 +122,7 @@ let client = hyper_util::client::legacy::Client::builder(
         .with_native_roots()
         .unwrap()
         .https_or_http()
-        .enable_http1()
+        .enable_http2()
         .build()
 );
 let mut hub = Contactcenterinsights::new(client, auth);
@@ -147,17 +158,17 @@ match result {
 ```
 ## Handling Errors
 
-All errors produced by the system are provided either as [Result](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/common::Result) enumeration as return value of
+All errors produced by the system are provided either as [Result](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/common::Result) enumeration as return value of
 the doit() methods, or handed as possibly intermediate results to either the
-[Hub Delegate](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/common::Delegate), or the [Authenticator Delegate](https://docs.rs/yup-oauth2/*/yup_oauth2/trait.AuthenticatorDelegate.html).
+[Hub Delegate](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/common::Delegate), or the [Authenticator Delegate](https://docs.rs/yup-oauth2/*/yup_oauth2/trait.AuthenticatorDelegate.html).
 
 When delegates handle errors or intermediate values, they may have a chance to instruct the system to retry. This
 makes the system potentially resilient to all kinds of errors.
 
 ## Uploads and Downloads
-If a method supports downloads, the response body, which is part of the [Result](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/common::Result), should be
+If a method supports downloads, the response body, which is part of the [Result](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/common::Result), should be
 read by you to obtain the media.
-If such a method also supports a [Response Result](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/common::ResponseResult), it will return that by default.
+If such a method also supports a [Response Result](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/common::ResponseResult), it will return that by default.
 You can see it as meta-data for the actual media. To trigger a media download, you will have to set up the builder by making
 this call: `.param("alt", "media")`.
 
@@ -167,29 +178,29 @@ Methods supporting uploads can do so using up to 2 different protocols:
 
 ## Customization and Callbacks
 
-You may alter the way an `doit()` method is called by providing a [delegate](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/common::Delegate) to the
-[Method Builder](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/common::CallBuilder) before making the final `doit()` call.
+You may alter the way an `doit()` method is called by providing a [delegate](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/common::Delegate) to the
+[Method Builder](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/common::CallBuilder) before making the final `doit()` call.
 Respective methods will be called to provide progress information, as well as determine whether the system should
 retry on failure.
 
-The [delegate trait](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/common::Delegate) is default-implemented, allowing you to customize it with minimal effort.
+The [delegate trait](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/common::Delegate) is default-implemented, allowing you to customize it with minimal effort.
 
 ## Optional Parts in Server-Requests
 
-All structures provided by this library are made to be [encodable](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/common::RequestValue) and
-[decodable](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/common::ResponseResult) via *json*. Optionals are used to indicate that partial requests are responses
+All structures provided by this library are made to be [encodable](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/common::RequestValue) and
+[decodable](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/common::ResponseResult) via *json*. Optionals are used to indicate that partial requests are responses
 are valid.
-Most optionals are are considered [Parts](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/common::Part) which are identifiable by name, which will be sent to
+Most optionals are are considered [Parts](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/common::Part) which are identifiable by name, which will be sent to
 the server to indicate either the set parts of the request or the desired parts in the response.
 
 ## Builder Arguments
 
-Using [method builders](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/common::CallBuilder), you are able to prepare an action call by repeatedly calling it's methods.
+Using [method builders](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/common::CallBuilder), you are able to prepare an action call by repeatedly calling it's methods.
 These will always take a single argument, for which the following statements are true.
 
 * [PODs][wiki-pod] are handed by copy
 * strings are passed as `&str`
-* [request values](https://docs.rs/google-contactcenterinsights1/6.0.0+20240624/google_contactcenterinsights1/common::RequestValue) are moved
+* [request values](https://docs.rs/google-contactcenterinsights1/7.0.0+20240624/google_contactcenterinsights1/common::RequestValue) are moved
 
 Arguments will always be copied or cloned into the builder, to make them independent of their original life times.
 

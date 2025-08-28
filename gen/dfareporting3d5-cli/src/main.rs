@@ -348,11 +348,19 @@ where
         }
         let mut request: api::CreativeAssetMetadata =
             serde_json::value::from_value(object).unwrap();
-        let mut call = self.hub.media().upload(
-            request,
-            opt.value_of("profile-id").unwrap_or(""),
-            opt.value_of("advertiser-id").unwrap_or(""),
+        let profile_id: i64 = arg_from_str(
+            &opt.value_of("profile-id").unwrap_or(""),
+            err,
+            "<profile-id>",
+            "int64",
         );
+        let advertiser_id: i64 = arg_from_str(
+            &opt.value_of("advertiser-id").unwrap_or(""),
+            err,
+            "<advertiser-id>",
+            "int64",
+        );
+        let mut call = self.hub.media().upload(request, profile_id, advertiser_id);
         for parg in opt
             .values_of("v")
             .map(|i| i.collect())
@@ -494,7 +502,9 @@ where
         let auth = yup_oauth2::InstalledFlowAuthenticator::with_client(
             secret,
             yup_oauth2::InstalledFlowReturnMethod::HTTPRedirect,
-            hyper_util::client::legacy::Client::builder(executor).build(connector),
+            yup_oauth2::client::CustomHyperClientBuilder::from(
+                hyper_util::client::legacy::Client::builder(executor).build(connector),
+            ),
         )
         .persist_tokens_to_disk(format!("{}/dfareporting3d5", config_dir))
         .build()
@@ -589,7 +599,7 @@ async fn main() {
 
     let mut app = App::new("dfareporting3d5")
            .author("Sebastian Thiel <byronimo@gmail.com>")
-           .version("6.0.0+20240625")
+           .version("7.0.0+20240625")
            .about("Build applications to efficiently manage large or complex trafficking, reporting, and attribution workflows for Campaign Manager 360.")
            .after_help("All documentation details can be found at http://byron.github.io/google-apis-rs/google_dfareporting3d5_cli")
            .arg(Arg::with_name("url")
@@ -667,7 +677,7 @@ async fn main() {
         .with_native_roots()
         .unwrap()
         .https_or_http()
-        .enable_http1()
+        .enable_http2()
         .build();
 
     match Engine::new(matches, connector).await {

@@ -1140,7 +1140,9 @@ where
         let auth = yup_oauth2::InstalledFlowAuthenticator::with_client(
             secret,
             yup_oauth2::InstalledFlowReturnMethod::HTTPRedirect,
-            hyper_util::client::legacy::Client::builder(executor).build(connector),
+            yup_oauth2::client::CustomHyperClientBuilder::from(
+                hyper_util::client::legacy::Client::builder(executor).build(connector),
+            ),
         )
         .persist_tokens_to_disk(format!("{}/videointelligence1", config_dir))
         .build()
@@ -1368,7 +1370,7 @@ async fn main() {
 
     let mut app = App::new("videointelligence1")
            .author("Sebastian Thiel <byronimo@gmail.com>")
-           .version("6.0.0+20240614")
+           .version("7.0.0+20240614")
            .about("Detects objects, explicit content, and scene changes in videos. It also specifies the region for annotation and transcribes speech to text. Supports both asynchronous API and streaming API.")
            .after_help("All documentation details can be found at http://byron.github.io/google-apis-rs/google_videointelligence1_cli")
            .arg(Arg::with_name("url")
@@ -1433,7 +1435,7 @@ async fn main() {
         .with_native_roots()
         .unwrap()
         .https_or_http()
-        .enable_http1()
+        .enable_http2()
         .build();
 
     match Engine::new(matches, connector).await {

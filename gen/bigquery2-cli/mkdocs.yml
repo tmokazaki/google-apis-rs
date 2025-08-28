@@ -1,4 +1,4 @@
-site_name: Bigquery v5.0.3+20240214
+site_name: Bigquery v7.0.0+20240616
 site_url: http://byron.github.io/google-apis-rs/google-bigquery2-cli
 site_description: A complete library to interact with Bigquery (protocol v2)
 
@@ -36,8 +36,10 @@ nav:
 - 'Routines':
     - 'Delete': 'routines_delete.md'
     - 'Get': 'routines_get.md'
+    - 'Get Iam Policy': 'routines_get-iam-policy.md'
     - 'Insert': 'routines_insert.md'
     - 'List': 'routines_list.md'
+    - 'Set Iam Policy': 'routines_set-iam-policy.md'
     - 'Update': 'routines_update.md'
 - 'Row Access Policies':
     - 'Get Iam Policy': 'row-access-policies_get-iam-policy.md'
@@ -59,5 +61,4 @@ nav:
 
 theme: readthedocs
 
-copyright: Copyright &copy; 2015-2020, `Sebastian Thiel`
-
+copyright: Copyright &copy; 2015–2024, `Sebastian Thiel`
