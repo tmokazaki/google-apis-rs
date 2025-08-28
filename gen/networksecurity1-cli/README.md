@@ -25,7 +25,7 @@ Find the source code [on github](https://github.com/Byron/google-apis-rs/tree/ma
 
 # Usage
 
-This documentation was generated from the *NetworkSecurity* API at revision *20240606*. The CLI is at version *6.0.0*.
+This documentation was generated from the *NetworkSecurity* API at revision *20240606*. The CLI is at version *7.0.0*.
 
 ```bash
 networksecurity1 [options]

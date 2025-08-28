@@ -13406,7 +13406,9 @@ where
         let auth = yup_oauth2::InstalledFlowAuthenticator::with_client(
             secret,
             yup_oauth2::InstalledFlowReturnMethod::HTTPRedirect,
-            hyper_util::client::legacy::Client::builder(executor).build(connector),
+            yup_oauth2::client::CustomHyperClientBuilder::from(
+                hyper_util::client::legacy::Client::builder(executor).build(connector),
+            ),
         )
         .persist_tokens_to_disk(format!("{}/iam1", config_dir))
         .build()
@@ -15700,7 +15702,7 @@ async fn main() {
 
     let mut app = App::new("iam1")
            .author("Sebastian Thiel <byronimo@gmail.com>")
-           .version("6.0.0+20240621")
+           .version("7.0.0+20240621")
            .about("Manages identity and access control for Google Cloud resources, including the creation of service accounts, which you can use to authenticate to Google and make API calls. Enabling this API also enables the IAM Service Account Credentials API (iamcredentials.googleapis.com). However, disabling this API doesn't disable the IAM Service Account Credentials API. ")
            .after_help("All documentation details can be found at http://byron.github.io/google-apis-rs/google_iam1_cli")
            .arg(Arg::with_name("url")
@@ -15765,7 +15767,7 @@ async fn main() {
         .with_native_roots()
         .unwrap()
         .https_or_http()
-        .enable_http1()
+        .enable_http2()
         .build();
 
     match Engine::new(matches, connector).await {

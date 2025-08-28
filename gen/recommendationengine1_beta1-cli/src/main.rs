@@ -3503,7 +3503,9 @@ where
         let auth = yup_oauth2::InstalledFlowAuthenticator::with_client(
             secret,
             yup_oauth2::InstalledFlowReturnMethod::HTTPRedirect,
-            hyper_util::client::legacy::Client::builder(executor).build(connector),
+            yup_oauth2::client::CustomHyperClientBuilder::from(
+                hyper_util::client::legacy::Client::builder(executor).build(connector),
+            ),
         )
         .persist_tokens_to_disk(format!("{}/recommendationengine1-beta1", config_dir))
         .build()
@@ -4052,7 +4054,7 @@ async fn main() {
 
     let mut app = App::new("recommendationengine1-beta1")
            .author("Sebastian Thiel <byronimo@gmail.com>")
-           .version("6.0.0+20240618")
+           .version("7.0.0+20240618")
            .about("Note that we now highly recommend new customers to use Retail API, which incorporates the GA version of the Recommendations AI funtionalities. To enable Retail API, please visit https://console.cloud.google.com/apis/library/retail.googleapis.com. The Recommendations AI service enables customers to build end-to-end personalized recommendation systems without requiring a high level of expertise in machine learning, recommendation system, or Google Cloud.")
            .after_help("All documentation details can be found at http://byron.github.io/google-apis-rs/google_recommendationengine1_beta1_cli")
            .arg(Arg::with_name("url")
@@ -4117,7 +4119,7 @@ async fn main() {
         .with_native_roots()
         .unwrap()
         .https_or_http()
-        .enable_http1()
+        .enable_http2()
         .build();
 
     match Engine::new(matches, connector).await {

@@ -2516,7 +2516,9 @@ where
         let auth = yup_oauth2::InstalledFlowAuthenticator::with_client(
             secret,
             yup_oauth2::InstalledFlowReturnMethod::HTTPRedirect,
-            hyper_util::client::legacy::Client::builder(executor).build(connector),
+            yup_oauth2::client::CustomHyperClientBuilder::from(
+                hyper_util::client::legacy::Client::builder(executor).build(connector),
+            ),
         )
         .persist_tokens_to_disk(format!("{}/analyticsdata1-beta", config_dir))
         .build()
@@ -2835,7 +2837,7 @@ async fn main() {
 
     let mut app = App::new("analyticsdata1-beta")
            .author("Sebastian Thiel <byronimo@gmail.com>")
-           .version("6.0.0+20240625")
+           .version("7.0.0+20240625")
            .about("Accesses report data in Google Analytics. Warning: Creating multiple Customer Applications, Accounts, or Projects to simulate or act as a single Customer Application, Account, or Project (respectively) or to circumvent Service-specific usage limits or quotas is a direct violation of Google Cloud Platform Terms of Service as well as Google APIs Terms of Service. These actions can result in immediate termination of your GCP project(s) without any warning. ")
            .after_help("All documentation details can be found at http://byron.github.io/google-apis-rs/google_analyticsdata1_beta_cli")
            .arg(Arg::with_name("url")
@@ -2900,7 +2902,7 @@ async fn main() {
         .with_native_roots()
         .unwrap()
         .https_or_http()
-        .enable_http1()
+        .enable_http2()
         .build();
 
     match Engine::new(matches, connector).await {

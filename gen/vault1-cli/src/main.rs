@@ -5058,7 +5058,9 @@ where
         let auth = yup_oauth2::InstalledFlowAuthenticator::with_client(
             secret,
             yup_oauth2::InstalledFlowReturnMethod::HTTPRedirect,
-            hyper_util::client::legacy::Client::builder(executor).build(connector),
+            yup_oauth2::client::CustomHyperClientBuilder::from(
+                hyper_util::client::legacy::Client::builder(executor).build(connector),
+            ),
         )
         .persist_tokens_to_disk(format!("{}/vault1", config_dir))
         .build()
@@ -5914,7 +5916,7 @@ async fn main() {
 
     let mut app = App::new("vault1")
            .author("Sebastian Thiel <byronimo@gmail.com>")
-           .version("6.0.0+20240617")
+           .version("7.0.0+20240617")
            .about("Retention and eDiscovery for Google Workspace. To work with Vault resources, the account must have the [required Vault privileges](https://support.google.com/vault/answer/2799699) and access to the matter. To access a matter, the account must have created the matter, have the matter shared with them, or have the **View All Matters** privilege. For example, to download an export, an account needs the **Manage Exports** privilege and the matter shared with them. ")
            .after_help("All documentation details can be found at http://byron.github.io/google-apis-rs/google_vault1_cli")
            .arg(Arg::with_name("url")
@@ -5979,7 +5981,7 @@ async fn main() {
         .with_native_roots()
         .unwrap()
         .https_or_http()
-        .enable_http1()
+        .enable_http2()
         .build();
 
     match Engine::new(matches, connector).await {

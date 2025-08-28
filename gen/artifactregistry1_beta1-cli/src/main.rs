@@ -2806,7 +2806,9 @@ where
         let auth = yup_oauth2::InstalledFlowAuthenticator::with_client(
             secret,
             yup_oauth2::InstalledFlowReturnMethod::HTTPRedirect,
-            hyper_util::client::legacy::Client::builder(executor).build(connector),
+            yup_oauth2::client::CustomHyperClientBuilder::from(
+                hyper_util::client::legacy::Client::builder(executor).build(connector),
+            ),
         )
         .persist_tokens_to_disk(format!("{}/artifactregistry1-beta1", config_dir))
         .build()
@@ -3375,7 +3377,7 @@ async fn main() {
 
     let mut app = App::new("artifactregistry1-beta1")
            .author("Sebastian Thiel <byronimo@gmail.com>")
-           .version("6.0.0+20240608")
+           .version("7.0.0+20240608")
            .about("Store and manage build artifacts in a scalable and integrated service built on Google infrastructure.")
            .after_help("All documentation details can be found at http://byron.github.io/google-apis-rs/google_artifactregistry1_beta1_cli")
            .arg(Arg::with_name("url")
@@ -3440,7 +3442,7 @@ async fn main() {
         .with_native_roots()
         .unwrap()
         .https_or_http()
-        .enable_http1()
+        .enable_http2()
         .build();
 
     match Engine::new(matches, connector).await {

@@ -29304,7 +29304,7 @@ where
 
         let mut url = self.hub._base_url.clone() + "gmail/v1/users/{userId}/stop";
         if self._scopes.is_empty() {
-            self._scopes.insert(Scope::Gmai.as_ref().to_string());
+            self._scopes.insert(Scope::Readonly.as_ref().to_string());
         }
 
         #[allow(clippy::single_element_loop)]
@@ -29448,7 +29448,7 @@ where
     /// Identifies the authorization scope for the method you are building.
     ///
     /// Use this method to actively specify which scope should be used, instead of the default [`Scope`] variant
-    /// [`Scope::Gmai`].
+    /// [`Scope::Readonly`].
     ///
     /// The `scope` will be added to a set of scopes. This is important as one can maintain access
     /// tokens for more than one scope.
@@ -29591,7 +29591,7 @@ where
         params.push("alt", "json");
         let mut url = self.hub._base_url.clone() + "gmail/v1/users/{userId}/watch";
         if self._scopes.is_empty() {
-            self._scopes.insert(Scope::Gmai.as_ref().to_string());
+            self._scopes.insert(Scope::Readonly.as_ref().to_string());
         }
 
         #[allow(clippy::single_element_loop)]
@@ -29778,7 +29778,7 @@ where
     /// Identifies the authorization scope for the method you are building.
     ///
     /// Use this method to actively specify which scope should be used, instead of the default [`Scope`] variant
-    /// [`Scope::Gmai`].
+    /// [`Scope::Readonly`].
     ///
     /// The `scope` will be added to a set of scopes. This is important as one can maintain access
     /// tokens for more than one scope.

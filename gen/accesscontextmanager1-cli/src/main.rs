@@ -5152,7 +5152,9 @@ where
         let auth = yup_oauth2::InstalledFlowAuthenticator::with_client(
             secret,
             yup_oauth2::InstalledFlowReturnMethod::HTTPRedirect,
-            hyper_util::client::legacy::Client::builder(executor).build(connector),
+            yup_oauth2::client::CustomHyperClientBuilder::from(
+                hyper_util::client::legacy::Client::builder(executor).build(connector),
+            ),
         )
         .persist_tokens_to_disk(format!("{}/accesscontextmanager1", config_dir))
         .build()
@@ -6077,7 +6079,7 @@ async fn main() {
 
     let mut app = App::new("accesscontextmanager1")
            .author("Sebastian Thiel <byronimo@gmail.com>")
-           .version("6.0.0+20240623")
+           .version("7.0.0+20240623")
            .about("An API for setting attribute based access control to requests to Google Cloud services. *Warning:* Do not mix *v1alpha* and *v1* API usage in the same access policy. The v1alpha API supports new Access Context Manager features, which may have different attributes or behaviors that are not supported by v1. The practice of mixed API usage within a policy may result in the inability to update that policy, including any access levels or service perimeters belonging to it. It is not recommended to use both v1 and v1alpha for modifying policies with critical service perimeters. Modifications using v1alpha should be limited to policies with non-production/non-critical service perimeters.")
            .after_help("All documentation details can be found at http://byron.github.io/google-apis-rs/google_accesscontextmanager1_cli")
            .arg(Arg::with_name("url")
@@ -6142,7 +6144,7 @@ async fn main() {
         .with_native_roots()
         .unwrap()
         .https_or_http()
-        .enable_http1()
+        .enable_http2()
         .build();
 
     match Engine::new(matches, connector).await {

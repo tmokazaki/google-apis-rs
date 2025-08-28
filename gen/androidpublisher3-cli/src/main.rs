@@ -325,9 +325,15 @@ where
         dry_run: bool,
         err: &mut InvalidOptionsError,
     ) -> Result<(), DoitError> {
+        let device_tier_config_id: i64 = arg_from_str(
+            &opt.value_of("device-tier-config-id").unwrap_or(""),
+            err,
+            "<device-tier-config-id>",
+            "int64",
+        );
         let mut call = self.hub.applications().device_tier_configs_get(
             opt.value_of("package-name").unwrap_or(""),
-            opt.value_of("device-tier-config-id").unwrap_or(""),
+            device_tier_config_id,
         );
         for parg in opt
             .values_of("v")
@@ -576,10 +582,16 @@ where
             }
         }
         let mut request: api::AddTargetingRequest = serde_json::value::from_value(object).unwrap();
+        let app_recovery_id: i64 = arg_from_str(
+            &opt.value_of("app-recovery-id").unwrap_or(""),
+            err,
+            "<app-recovery-id>",
+            "int64",
+        );
         let mut call = self.hub.apprecovery().add_targeting(
             request,
             opt.value_of("package-name").unwrap_or(""),
-            opt.value_of("app-recovery-id").unwrap_or(""),
+            app_recovery_id,
         );
         for parg in opt
             .values_of("v")
@@ -794,10 +806,16 @@ where
         }
         let mut request: api::CancelAppRecoveryRequest =
             serde_json::value::from_value(object).unwrap();
+        let app_recovery_id: i64 = arg_from_str(
+            &opt.value_of("app-recovery-id").unwrap_or(""),
+            err,
+            "<app-recovery-id>",
+            "int64",
+        );
         let mut call = self.hub.apprecovery().cancel(
             request,
             opt.value_of("package-name").unwrap_or(""),
-            opt.value_of("app-recovery-id").unwrap_or(""),
+            app_recovery_id,
         );
         for parg in opt
             .values_of("v")
@@ -1118,10 +1136,16 @@ where
         }
         let mut request: api::DeployAppRecoveryRequest =
             serde_json::value::from_value(object).unwrap();
+        let app_recovery_id: i64 = arg_from_str(
+            &opt.value_of("app-recovery-id").unwrap_or(""),
+            err,
+            "<app-recovery-id>",
+            "int64",
+        );
         let mut call = self.hub.apprecovery().deploy(
             request,
             opt.value_of("package-name").unwrap_or(""),
-            opt.value_of("app-recovery-id").unwrap_or(""),
+            app_recovery_id,
         );
         for parg in opt
             .values_of("v")
@@ -2051,7 +2075,7 @@ where
             &opt.value_of("apk-version-code").unwrap_or(""),
             err,
             "<apk-version-code>",
-            "integer",
+            "int32",
         );
         let mut call = self.hub.edits().deobfuscationfiles_upload(
             opt.value_of("package-name").unwrap_or(""),
@@ -2561,7 +2585,7 @@ where
             &opt.value_of("apk-version-code").unwrap_or(""),
             err,
             "<apk-version-code>",
-            "integer",
+            "int32",
         );
         let mut call = self.hub.edits().expansionfiles_get(
             opt.value_of("package-name").unwrap_or(""),
@@ -2711,7 +2735,7 @@ where
             &opt.value_of("apk-version-code").unwrap_or(""),
             err,
             "<apk-version-code>",
-            "integer",
+            "int32",
         );
         let mut call = self.hub.edits().expansionfiles_patch(
             request,
@@ -2862,7 +2886,7 @@ where
             &opt.value_of("apk-version-code").unwrap_or(""),
             err,
             "<apk-version-code>",
-            "integer",
+            "int32",
         );
         let mut call = self.hub.edits().expansionfiles_update(
             request,
@@ -2952,7 +2976,7 @@ where
             &opt.value_of("apk-version-code").unwrap_or(""),
             err,
             "<apk-version-code>",
-            "integer",
+            "int32",
         );
         let mut call = self.hub.edits().expansionfiles_upload(
             opt.value_of("package-name").unwrap_or(""),
@@ -5816,7 +5840,7 @@ where
             &opt.value_of("version-code").unwrap_or(""),
             err,
             "<version-code>",
-            "integer",
+            "int32",
         );
         let mut download_mode = false;
         let mut call = self.hub.generatedapks().download(
@@ -5916,7 +5940,7 @@ where
             &opt.value_of("version-code").unwrap_or(""),
             err,
             "<version-code>",
-            "integer",
+            "int32",
         );
         let mut call = self
             .hub
@@ -13086,10 +13110,16 @@ where
             }
         }
         let mut request: api::Variant = serde_json::value::from_value(object).unwrap();
+        let version_code: i64 = arg_from_str(
+            &opt.value_of("version-code").unwrap_or(""),
+            err,
+            "<version-code>",
+            "int64",
+        );
         let mut call = self.hub.systemapks().variants_create(
             request,
             opt.value_of("package-name").unwrap_or(""),
-            opt.value_of("version-code").unwrap_or(""),
+            version_code,
         );
         for parg in opt
             .values_of("v")
@@ -13168,16 +13198,22 @@ where
         dry_run: bool,
         err: &mut InvalidOptionsError,
     ) -> Result<(), DoitError> {
+        let version_code: i64 = arg_from_str(
+            &opt.value_of("version-code").unwrap_or(""),
+            err,
+            "<version-code>",
+            "int64",
+        );
         let variant_id: u32 = arg_from_str(
             &opt.value_of("variant-id").unwrap_or(""),
             err,
             "<variant-id>",
-            "integer",
+            "uint32",
         );
         let mut download_mode = false;
         let mut call = self.hub.systemapks().variants_download(
             opt.value_of("package-name").unwrap_or(""),
-            opt.value_of("version-code").unwrap_or(""),
+            version_code,
             variant_id,
         );
         for parg in opt
@@ -13268,15 +13304,21 @@ where
         dry_run: bool,
         err: &mut InvalidOptionsError,
     ) -> Result<(), DoitError> {
+        let version_code: i64 = arg_from_str(
+            &opt.value_of("version-code").unwrap_or(""),
+            err,
+            "<version-code>",
+            "int64",
+        );
         let variant_id: u32 = arg_from_str(
             &opt.value_of("variant-id").unwrap_or(""),
             err,
             "<variant-id>",
-            "integer",
+            "uint32",
         );
         let mut call = self.hub.systemapks().variants_get(
             opt.value_of("package-name").unwrap_or(""),
-            opt.value_of("version-code").unwrap_or(""),
+            version_code,
             variant_id,
         );
         for parg in opt
@@ -13356,10 +13398,16 @@ where
         dry_run: bool,
         err: &mut InvalidOptionsError,
     ) -> Result<(), DoitError> {
-        let mut call = self.hub.systemapks().variants_list(
-            opt.value_of("package-name").unwrap_or(""),
-            opt.value_of("version-code").unwrap_or(""),
+        let version_code: i64 = arg_from_str(
+            &opt.value_of("version-code").unwrap_or(""),
+            err,
+            "<version-code>",
+            "int64",
         );
+        let mut call = self
+            .hub
+            .systemapks()
+            .variants_list(opt.value_of("package-name").unwrap_or(""), version_code);
         for parg in opt
             .values_of("v")
             .map(|i| i.collect())
@@ -14570,7 +14618,9 @@ where
         let auth = yup_oauth2::InstalledFlowAuthenticator::with_client(
             secret,
             yup_oauth2::InstalledFlowReturnMethod::HTTPRedirect,
-            hyper_util::client::legacy::Client::builder(executor).build(connector),
+            yup_oauth2::client::CustomHyperClientBuilder::from(
+                hyper_util::client::legacy::Client::builder(executor).build(connector),
+            ),
         )
         .persist_tokens_to_disk(format!("{}/androidpublisher3", config_dir))
         .build()
@@ -17871,7 +17921,7 @@ async fn main() {
 
     let mut app = App::new("androidpublisher3")
            .author("Sebastian Thiel <byronimo@gmail.com>")
-           .version("6.0.0+20240626")
+           .version("7.0.0+20240626")
            .about("Lets Android application developers access their Google Play accounts. At a high level, the expected workflow is to \"insert\" an Edit, make changes as necessary, and then \"commit\" it. ")
            .after_help("All documentation details can be found at http://byron.github.io/google-apis-rs/google_androidpublisher3_cli")
            .arg(Arg::with_name("url")
@@ -17949,7 +17999,7 @@ async fn main() {
         .with_native_roots()
         .unwrap()
         .https_or_http()
-        .enable_http1()
+        .enable_http2()
         .build();
 
     match Engine::new(matches, connector).await {
